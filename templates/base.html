@@ -1,0 +1,52 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TO DO</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static "css/base_copy.css" %}'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-1">
+            <nav class="nav">
+                {% if request.user.is_authenticated %}
+                <button><a href="{% url 'logout' %}" class='ada'>Logout</a></button>
+                <h2>Hi     {{name.username}}</h2>
+                {% else %}
+                <button><a href="{% url 'login' %}" class='ada'>Login</a></button>
+                <button><a href="{% url 'signup' %}"class='ada'>Signup</a></button>
+                <h3>Hi</h3>
+                {% endif %}
+            </nav>
+        </div>
+        <div class="container-2">
+            {% if request.user.is_authenticated %}
+            <h3>You have {{nam}} tasks to finish </h3>
+            {% else %}
+            <h3>Please Login to view contents</h3>
+            {%endif %}
+        </div>
+        <form method="GET">
+        <div class="container-3">
+          
+           
+            {% csrf_token  %}
+            {% if request.user.is_authenticated %}
+            <li class="aa"><a href="btn">Add +</a></li>
+            {% for list in lists %}
+                <!--<a href="deta/{{list.id}}"><li class="li">{{list.Title}}</li></a>-->
+                <li class="aa"><a href="{% url 'deta' ids=list.id %}">{{list.Title}}</a></li>
+            {% endfor %}
+            {%endif%}
+        </form>
+            
+          
+        </div>
+    </div>
+    
+</body>
+</html>

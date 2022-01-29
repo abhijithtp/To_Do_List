@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Mochiy+Pop+P+One&family=Outfit:wght@400;700&family=Permanent+Marker&family=Source+Serif+4:wght@500&family=Supermercado+One&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-rows: 0.5fr 0.4fr 5fr;
+    background-color: #FFEBCD;
+    height:37em;
+    color:#006C60
+}
+.container-1{
+    background-color: bisque;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    font-family: 'Acme', sans-serif;
+    padding:16px;
+    box-sizing: border-box;
+}
+.container-2{
+    background-color: #C7CCAD;
+    text-align: center;
+    padding-top: 0.45em;
+    font-family: 'Acme', sans-serif;
+    padding:14px;
+    
+}
+.container-3{
+    box-sizing: border-box;
+    overflow:scroll;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows: 225px;
+    grid-gap:1em;
+    font-family: 'Acme', sans-serif;
+}
+button{
+    float:right;
+    margin-right: 1em;
+    padding: 0.35em;
+    border-radius: 18px;
+    background-color: #C7CCAD;
+    border: 1px solid darkgrey;
+}
+.ada{
+    
+    font-size: 17px;
+}
+button:hover{
+    background-color: darkgray;
+}
+.aa{
+    border:2px solid darkgray ;
+    background-color: #C7CCAD;
+    padding:60px;
+    margin:20px;
+    border-radius: 10px;
+    list-style-type: none;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    font-size:30px;
+    color:#006C60;
+   
+}
+h2{
+    margin-left:0.5em;
+}
+li:hover{
+    background-color:darkgray ;
+    border:1px solid #C7CCAD;
+}
+ab{
+    align-self: flex-start;
+}
